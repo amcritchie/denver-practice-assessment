@@ -49,3 +49,17 @@ forecast = [
     }
   }
 ]
+print "="*36 + "\n"
+print "Here is your forecast for this week!\n"
+print "="*36 + "\n"
+
+forecast.each do |day|
+  print day["day"].capitalize
+  print " "*(35 - day["day"].length) + "|"
+  print "\nHigh: "
+  print day["temperatures"]["high"]
+  print ", Low: "
+  print day["temperatures"]["low"]
+  print " "*(18) + "|\n"
+end
+print "="*36 + "\n"
